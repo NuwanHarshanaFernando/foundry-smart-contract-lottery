@@ -76,6 +76,26 @@ $ forge install smartcontractkit/chainlink-brownie-contracts@1.1.1
 ```shell
 $ forge fmt
 ```
+## Tests
+
+1. Write deploy scripts
+    1. Note, these will not work on zkSync
+2. Write tests
+    1. Local chain
+    2. Forked testnet
+    3. Forked mainnet
+
+    Create a file called DeployRaffle.s.sol inside script folder
+
+    Create a file called HelperConfig.s.sol insdide script folder
+
+    Get VRF Coordinator of Sepolia Testnet
+
+    https://docs.chain.link/vrf/v2-5/supported-networks
+
+    Copy the VRF Coordinator of Ethereum Sepolia Testnet and paste for value of vrfCoordinator
+    in HelperConfig.s.sol
+    0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B
 
 
 
