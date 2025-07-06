@@ -125,6 +125,44 @@ $ cast sig createSubscription 0xa21a23e4
 ## To get the value of signatures from openchain database (get the function from hexdata)
 https://openchain.xyz/signatures
 
+Go to https://faucets.chain.link/sepolia and get 25 test LINK
+
+Go to https://docs.chain.link/
+Go to Link Token Contracts
+Go to Sepolia Testnet
+Copy the address
+
+Create another contract called FundSubscription in Interactions.s.sol for fund subscription programatically
+
+Set link in NetworkConfig in HelperConfig.s.sol what we get from https://docs.chain.link/resources/link-token-contracts
+
+For localNetworkConfig, we have to set a fake LINK token
+
+https://github.com/Cyfrin/foundry-smart-contract-lottery-cu/blob/main/test/mocks/LinkToken.sol
+
+Copy the source code
+
+Create a new folder called mocks inside test folder
+Create a new file called LinkToken.sol and paste there.
+
+## Solmate to import ERC20 
+
+Go to https://github.com/transmissions11/solmate
+
+```shell
+$ forge install transmissions11/solmate@v6 --no-commit
+```
+
+Then update remapping in foundry.toml
+
+```shell
+$ cast wallet import myaccount --interactive
+```
+
+```shell
+$ forge script script/Interactions.s.sol:FundSubscription --rpc-url $SEPOLIA_RPC_URL --account default --broadcast
+```
+
 
 
 

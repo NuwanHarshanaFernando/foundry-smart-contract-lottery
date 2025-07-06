@@ -6,6 +6,7 @@ import {Raffle} from "src/Raffle.sol";
 //import {Raffle} from "../src/Raffle.sol";
 // These both imports are working
 import {HelperConfig} from "script/HelperConfig.s.sol";
+import {CreateSubscription} from "script/Interactions.s.sol";
 
 contract DeployRaffle is Script {
     function run() public {}
@@ -16,7 +17,12 @@ contract DeployRaffle is Script {
         // sepolia -> get sepolia config
         HelperConfig.NetworkConfig memory config = helperConfig.getConfig();
 
-        if (config.subscriptionId == 0) {}
+        if (config.subscriptionId == 0) {
+            // create subscription
+            CreateSubscription createSubscription = new CreateSubscription();
+            (config.subscriptionId, config.vrfCoordinator) = createSubscription
+                .createSubscription(config.vrfCoordinator); // Saving subscriptionId and vrfCoordinator to our Raffle
+        }
 
         vm.startBroadcast();
         Raffle raffle = new Raffle(
