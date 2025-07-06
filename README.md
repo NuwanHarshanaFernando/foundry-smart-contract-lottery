@@ -99,7 +99,18 @@ $ forge fmt
 
     Check the constructor of VRFCoordinatorV2_5Mock
 
-    //constructor(uint96 _baseFee, uint96 _gasPrice, int256 _weiPerUnitLink) SubscriptionAPI() {
+    //constructor(uint96 _baseFee, uint96 _gasPrice, int256 _weiPerUnitLink) SubscriptionAPI() {}
 
+## Testing Start
+
+Create unit and integration folders inside test folder
+
+## Headers (Optional)
+
+https://github.com/transmissions11/headers
+
+```shell
+$ forge test --mt testRaffleRevertsWhenYouDontPayEnough
+```
 
 
