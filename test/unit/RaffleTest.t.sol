@@ -75,6 +75,7 @@ contract RaffleTest is Test {
         raffle.enterRaffle{value: entranceFee}();
     }
 
+    // This test fails because we don't have a subscription id
     function testDontAllowPlayersToEnterWhileRaffleIsCalculating() public {
         // Arrange
         vm.prank(PLAYER);

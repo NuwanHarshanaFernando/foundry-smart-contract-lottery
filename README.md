@@ -113,4 +113,19 @@ https://github.com/transmissions11/headers
 $ forge test --mt testRaffleRevertsWhenYouDontPayEnough
 ```
 
+## Create Subscription Id
+Create a script called Interactions.s.sol
+
+Go to https://vrf.chain.link/sepolia/ to create Subscription
+
+```shell
+$ cast sig createSubscription 0xa21a23e4
+```
+
+## To get the value of signatures from openchain database (get the function from hexdata)
+https://openchain.xyz/signatures
+
+
+
+
 
