@@ -62,7 +62,7 @@ contract HelperConfig is CodeConstants, Script {
                 vrfCoordinator: 0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B,
                 gasLane: 0x787d74caea10b2b357790d5b5247c2f63d1d91572a9846f780606e4d953677ae,
                 callbackGasLimit: 500000, // 500,000 gas
-                subscriptionId: 0,
+                subscriptionId: 7399647949254324747313642538347699474131487154543094178533628410601050572543,
                 link: 0x779877A7B0D9E8603169DdbD7836e478b4624789 // From https://docs.chain.link/resources/link-token-contracts
             });
     }

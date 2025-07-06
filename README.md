@@ -163,7 +163,34 @@ $ cast wallet import myaccount --interactive
 $ forge script script/Interactions.s.sol:FundSubscription --rpc-url $SEPOLIA_RPC_URL --account default --broadcast
 ```
 
+## Add Consumer
+Create a new contract called AddConsumer in Interactions.s.sol
 
+Go to https://vrf.chain.link/sepolia/ to add Consumer
 
+Go to broadcast/Interactions.s.sol
+
+Go to https://github.com/Cyfrin/foundry-devops
+
+```shell
+forge install Cyfrin/foundry-devops
+```
+
+```shell
+ forge install foundry-rs/forge-std@v1.8.2 
+```
+Update foundry.toml
+
+fs_permissions = [
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
+
+Foundry read access to the broadcast folder
+Foundry read access to the reports folder
+
+The previous version of Foundry has "ffi = true"
+
+Now testDontAllowPlayersToEnterWhileRaffleIsCalculating is passed because now we have a subcriptionId and a consumer
 
 
