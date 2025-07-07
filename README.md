@@ -193,4 +193,16 @@ The previous version of Foundry has "ffi = true"
 
 Now testDontAllowPlayersToEnterWhileRaffleIsCalculating is passed because now we have a subcriptionId and a consumer
 
+## Get a Coverage Report
+It shows the lines to be tested.
+
+```shell
+ forge coverage --report debug
+```
+
+To pipe the coverage report to a txt file
+
+```shell
+ forge coverage --report debug > coverage.txt
+```
 
